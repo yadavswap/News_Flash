@@ -238,7 +238,7 @@
                                 </p>
                             </div>
                         </div>
-                        
+                        <div class="sharethis-inline-share-buttons"></div>
                     </aside>
                 </div>
             </div>

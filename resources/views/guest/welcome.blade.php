@@ -71,7 +71,23 @@
             </div><!-- /.container-fluid -->
         </div>
         <!-- /.content-header -->
+        
+        {{-- master --}}
+        <div class="row">
+            <div class="col-12">
+            <img src="images/newskatta_masthead.png"  style="width:60%"/>
+            </div>
+        </div>
+        <style>
+                    img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -10px;
 
+
+            }
+            </style>
         <!-- Main content -->
         <div class="content">
             <div class="container">

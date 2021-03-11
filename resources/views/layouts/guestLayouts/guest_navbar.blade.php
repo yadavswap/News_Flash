@@ -2,10 +2,16 @@
     <div class="container">
         <a href="{{'/'}}" class="navbar-brand">
             <img src="{{url('/images/websiteImage/'.\App\SiteDetail::first()->website_image)}}" alt="{{\App\SiteDetail::first()->title}}"
-                 class="brand-image img-circle elevation-3"
-                 style="opacity: .8">
-            <span class="brand-text font-weight-light">{{\App\SiteDetail::first()->title}}</span>
+                 class="brand-image  "
+                 style="opacity: .8" id="img" >
+            {{-- <span class="brand-text font-weight-light">{{\App\SiteDetail::first()->title}}</span> --}}
         </a>
+        <style>
+
+            #img{
+                height: 80px;
+            }
+            </style>
 
         <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
