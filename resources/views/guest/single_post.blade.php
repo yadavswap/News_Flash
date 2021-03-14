@@ -169,7 +169,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="sharethis-inline-share-buttons" data-url="{{url('post')}}/{{$post->id}}" data-title="{{$post->title}}" data-image="http://newskatta.in/posts/2012186335520121721032news%20%20katta.png"
+                                <div class="sharethis-inline-share-buttons" data-url="{{url('post')}}/{{$post->title}}" data-title="{{$post->title}}" data-image="http://newskatta.in/posts/2012186335520121721032news%20%20katta.png"
                                     ></div>
                             </div>
                             <!-- /.card-body -->
