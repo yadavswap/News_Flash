@@ -5,6 +5,8 @@
 
 
 @section('css')
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5fe2e4577c936200185ee863&product=inline-share-buttons" async="async"></script>
+
     <style>
         .tags a {
             display: inline-block;
@@ -238,7 +240,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="sharethis-inline-share-buttons"></div>
+                        {{-- <div class="sharethis-inline-share-buttons"></div> --}}
                     </aside>
                 </div>
             </div>
