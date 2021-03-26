@@ -81,6 +81,17 @@
                                                                 </select>
                                                             </div>
                                                         </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group row">
+                                                                <label>Select Multiple Images <small style="font-size: 12px;">(First image will be featured)</small></label>
+                                                                <div class="input-group">
+                                                                    <div class="custom-file">
+                                                                        <input required type="file" name="post_images[]" class="custom-file-input" id="post_image" multiple>
+                                                                        <label class="custom-file-label" for="post_image">Choose files</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                          <div class="card-body" style="display: block;">
                                                         <div class="row">
                                                             <div class="col-6">

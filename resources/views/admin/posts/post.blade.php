@@ -120,7 +120,7 @@
                                 <!-- /.card-tools -->
                             </div>
                             <!-- /.card-header -->
-                            {{--  <div class="card-body" style="display: block;">
+                             {{-- <div class="card-body" style="display: block;">
                                 <div class="row">
                                     <div class="col-6">
                                         <h5>Images</h5>

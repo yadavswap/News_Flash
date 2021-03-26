@@ -116,6 +116,27 @@ class PostController extends Controller
             $post->category_id = $request->post_category;
 
             $post->update();
+            if ($request->hasFile('post_images')) {
+                $counter = 0;
+                $images = $request->file('post_images');
+                foreach ($images as $image) {
+                    $filename = str_slug($request->input('post_title')) . '-' . rand(111, 99999) . '.' . $image->getClientOriginalExtension();
+                    $image_path = 'images/postImages/' . $filename;
+                    ini_set('memory_limit', '256M');
+                    MakeImage::make($image)->save($image_path);
+                    $image = new Image();
+                    $image->description = '';
+                    $image->url = $filename;
+                    $image->post_id = $post->id;
+                    if ($counter == 0) {
+                        $image->featured = true;
+                    } else {
+                        $image->featured = false;
+                    }
+                    $image->save();
+                    $counter++;
+                }
+            }
             $post->tags()->sync($request->post_tags);
 
             return redirect()->to('/posts')->with('flash_message_success', 'Post Edited Successfully');
