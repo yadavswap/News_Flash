@@ -201,7 +201,7 @@ class PostController extends Controller
                     $i++;
                 }
                 fclose($file);
-                array_filter($importData_arr);
+                // array_filter($importData_arr);
                 // echo "<pre>";
                 // print_r($importData_arr);exit;
 
@@ -211,7 +211,7 @@ class PostController extends Controller
                     }
                     $post          = new Post;
                     $post->title   = $importData[3] ;
-                    $post->slug    = Str::slug(substr($post->title, 0, 190));
+                    $post->slug    = $importData[4] ;
                     $post->content    = $importData[5] ;
                     $post->post_type = 'text';
                     $post->author_id = 1;
@@ -220,7 +220,9 @@ class PostController extends Controller
                     $post->meta_data  = 'null';
                     $post->place  =  $importData[0] ;
                     $post->editor  =  $importData[1];
-                    $post->views  =   100 ;
+                    $post->views  =    $importData[9] ;
+                    $post->created_at  =    $importData[10] ;
+
                     $post->save();
 
                    

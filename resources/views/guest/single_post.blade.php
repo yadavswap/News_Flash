@@ -1,7 +1,7 @@
 @extends('layouts.guestLayouts.guest_design')
-@section('title', 'Post')
+{{-- @section('title', 'Post') --}}
 @section('title', $post->title)
-@section('image', $post->image)
+@section('image', $post->images)
 
 
 @section('css')
@@ -99,6 +99,33 @@
         <div class="content">
             <div class="container">
                 <div class="row">
+                    <aside class="col-4">
+                        <h4 class="p-title mt-30"><b>CATEGORIES</b></h4>
+                        <div class="card-body p-0">
+                            <ul class="flex-column">
+                                @foreach($categories as $category)
+                                    <li class="nav-item tags">
+                                        <a href="{{url('/category/posts/'.$category->slug)}}"
+                                           class="nav-link tagColor" style="background-color:{{$category->color}} ">{{$category->title}}
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        <h4 class="p-title mt-30"><b>TAGS</b></h4>
+                        <div class="card-body p-0">
+                            <div class="tags">
+                                <p>
+                                    @foreach($tags as $tag)
+                                        <a href="{{url('/tag/posts/'.$tag->slug)}}"
+                                           class="tagColor tag-cloud-link">{{ $tag->title }}</a>
+                                    @endforeach
+                                </p>
+                            </div>
+                        </div>
+                        {{-- <div class="sharethis-inline-share-buttons"></div> --}}
+                    </aside>
+
                     <div class="col-8">
                         <h4 class="p-title mt-30"><b>{{$post->title}}</b></h4>
                         <div class="card">
@@ -215,35 +242,13 @@
                             </div>
                             <!-- /.card-footer -->
                         </div>
+                        
                     </div>
-                    <aside class="col-4">
-                        <h4 class="p-title mt-30"><b>CATEGORIES</b></h4>
-                        <div class="card-body p-0">
-                            <ul class="flex-column">
-                                @foreach($categories as $category)
-                                    <li class="nav-item tags">
-                                        <a href="{{url('/category/posts/'.$category->slug)}}"
-                                           class="nav-link tagColor" style="background-color:{{$category->color}} ">{{$category->title}}
-                                        </a>
-                                    </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        <h4 class="p-title mt-30"><b>TAGS</b></h4>
-                        <div class="card-body p-0">
-                            <div class="tags">
-                                <p>
-                                    @foreach($tags as $tag)
-                                        <a href="{{url('/tag/posts/'.$tag->slug)}}"
-                                           class="tagColor tag-cloud-link">{{ $tag->title }}</a>
-                                    @endforeach
-                                </p>
-                            </div>
-                        </div>
-                        {{-- <div class="sharethis-inline-share-buttons"></div> --}}
-                    </aside>
                 </div>
+                
             </div>
+            
         </div>
+        
     </div>
 @endsection

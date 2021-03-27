@@ -33,6 +33,7 @@ class UserController extends Controller
         $comments = $post->comments;
         $categories = Category::all();
         $tags = Tag::all();
+        // dd($post->image);
         return view('guest.single_post')->with(compact('post','images','comments','categories','tags'));
     }
 

@@ -25,9 +25,7 @@
 <meta property="og:image:width" content="490">
 <meta property="og:image:height" content="260">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5fd327e088122800187db5a6&product=inline-share-buttons" async="async"></script>
-<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=604a03ed9269c20011a29dcb&product=inline-share-buttons" async="async"></script>
-<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=604df5c751f70600114ff448&product=sop' async='async'></script>
+<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=604df5c751f70600114ff448&product=inline-share-buttons' async='async'></script>
 </head>
 <body>
     <div id="app">
