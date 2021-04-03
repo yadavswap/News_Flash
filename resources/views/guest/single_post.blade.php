@@ -1,7 +1,7 @@
 @extends('layouts.guestLayouts.guest_design')
 {{-- @section('title', 'Post') --}}
 @section('title', $post->title)
-@section('image', $post->images)
+@section('images', $post->images)
 
 
 @section('css')

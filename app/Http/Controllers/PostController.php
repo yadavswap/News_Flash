@@ -206,9 +206,9 @@ class PostController extends Controller
                 // print_r($importData_arr);exit;
 
                 foreach ($importData_arr as $importData) {
-                    if (!(isset($importData[0]) && isset($importData[1]) && isset($importData[2]))) {
-                        continue;
-                    }
+                    // if (!(isset($importData[0]) && isset($importData[1]) && isset($importData[2]))) {
+                    //     continue;
+                    // }
                     $post          = new Post;
                     $post->title   = $importData[3] ;
                     $post->slug    = $importData[4] ;
