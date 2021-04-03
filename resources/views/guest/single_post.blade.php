@@ -8,6 +8,7 @@
 <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5fe2e4577c936200185ee863&product=inline-share-buttons" async="async"></script>
 
     <style>
+        
         .tags a {
             display: inline-block;
             height: 24px;

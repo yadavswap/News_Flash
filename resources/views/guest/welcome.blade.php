@@ -2,6 +2,13 @@
 @section('title', 'Home')
 @section('css')
     <style>
+            marquee{
+      font-size: 20px;
+      font-weight: 800;
+      color: #8ebf42;
+      font-family: sans-serif;
+      background-color:brown;
+      }
         .tags a {
             display: inline-block;
             height: 24px;
@@ -78,6 +85,9 @@
             <img src="images/newskatta_masthead.png"  style="width:60%"/>
             </div>
         </div>
+        @foreach($featuredPosts->take(1) as $featured)
+       <marquee>{{$featured->title}}</marquee>
+        @endforeach
         <style>
                     img {
             display: block;
