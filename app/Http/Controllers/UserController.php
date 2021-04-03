@@ -19,6 +19,10 @@ use Stringy\Stringy;
 class UserController extends Controller
 {
     //
+
+    public function index(){
+        return view('guest.home');
+    }
     public function home(){
         $posts = Post::with(['images'])->orderBy('created_at','DESC')->paginate(10);
         $featuredPosts = Post::with(['images'])->orderBy('created_at','DESC')->get();

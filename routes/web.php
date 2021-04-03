@@ -20,6 +20,8 @@ Route::get('/clear',function (){
 
 //guest routes//
 Route::get('/','UserController@home')->name('user.home');//index
+Route::get('/home','UserController@index')->name('user.index');//index
+
 Route::get('/post/{post}','UserController@showSinglePost');//display single post
 Route::get('/category/posts/{category}','UserController@categoryPosts');//display posts by category
 Route::get('/tag/posts/{tag}','UserController@tagPosts');//display posts by tag

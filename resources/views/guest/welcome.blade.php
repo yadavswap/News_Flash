@@ -86,9 +86,32 @@
             margin-top: -10px;
 
 
+
             }
+            .mySlides {display:none;}
+
             </style>
+          
+            
+          @foreach($featuredPosts->take(3) as $featured)
+
+            <div class="w3-content w3-section" style="max-width:500px">
+                @foreach($featured->images->where('featured',1) as $key => $slider)
+                <img class="mySlides w3-animate-top" src="{{ url('images/postImages/'.$slider->url) }}" style="width:100%">
+              {{-- <img class="mySlides w3-animate-bottom" src="images/newskatta_masthead.png" style="width:100%">
+              <img class="mySlides w3-animate-top" src="images/newskatta_masthead.png" style="width:100%">
+              <img class="mySlides w3-animate-bottom" src="images/newskatta_masthead.png" style="width:100%"> --}}
+              @endforeach
+
+            </div>
+            @endforeach
+
+          
+            
+           
+            
         <!-- Main content -->
+
         <div class="content">
             <div class="container">
                 <div class="row">
@@ -195,6 +218,22 @@
         </div>
         <!-- /.content -->
     </div>
+    <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 2500);    
+        }
+        </script>
 @endsection
 
 
