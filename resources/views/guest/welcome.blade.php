@@ -97,7 +97,7 @@
 
             <div class="w3-content w3-section" style="max-width:500px">
                 @foreach($featured->images->where('featured',1) as $key => $slider)
-                <img class="mySlides w3-animate-top" src="{{ url('images/postImages/'.$slider->url) }}" style="width:100%">
+                <img class="mySlides w3-animate-right" src="{{ url('images/postImages/'.$slider->url) }}" style="width:100%">
               {{-- <img class="mySlides w3-animate-bottom" src="images/newskatta_masthead.png" style="width:100%">
               <img class="mySlides w3-animate-top" src="images/newskatta_masthead.png" style="width:100%">
               <img class="mySlides w3-animate-bottom" src="images/newskatta_masthead.png" style="width:100%"> --}}

@@ -99,7 +99,7 @@
         <div class="content">
             <div class="container">
                 <div class="row">
-                    <aside class="col-4">
+                    {{-- <aside class="col-4">
                         <h4 class="p-title mt-30"><b>CATEGORIES</b></h4>
                         <div class="card-body p-0">
                             <ul class="flex-column">
@@ -123,10 +123,9 @@
                                 </p>
                             </div>
                         </div>
-                        {{-- <div class="sharethis-inline-share-buttons"></div> --}}
-                    </aside>
+                    </aside> --}}
 
-                    <div class="col-8">
+                    <div class="col-12">
                         <h4 class="p-title mt-30"><b>{{$post->title}}</b></h4>
                         <div class="card">
                             <div class="card-header">
@@ -147,7 +146,7 @@
                                 <!-- /.card-tools -->
                             </div>
                             <!-- /.card-header -->
-                            <div class="card-body" style="display: block;">
+                            <div class="card-body" >
                                 <div class="row">
                                     <div class="col-2"></div>
                                     <div class="col-8">
@@ -155,7 +154,7 @@
                                             <ol class="carousel-indicators">
                                                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                                             </ol>
-                                            <div class="carousel-inner" style="width:100%; height:300px !important;">
+                                            <div class="carousel-inner" style="width:100%;  !important;">
                                                 @foreach($post->images as $key => $slider)
                                                     <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
                                                         <a href="{{ url('images/postImages/'.$slider->url) }}" class="fancybox">
@@ -241,8 +240,39 @@
                                 @endguest
                             </div>
                             <!-- /.card-footer -->
+                            
                         </div>
-                        
+                        <div class="content">
+                            <div class="container">
+                                <div class="row">
+                        <aside class="col-12">
+                            <h4 class="p-title mt-30"><b>CATEGORIES</b></h4>
+                            <div class="card-body p-0">
+                                <ul class="flex-column">
+                                    @foreach($categories as $category)
+                                        <li class="nav-item tags">
+                                            <a href="{{url('/category/posts/'.$category->slug)}}"
+                                               class="nav-link tagColor" style="background-color:{{$category->color}} ">{{$category->title}}
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            <h4 class="p-title mt-30"><b>TAGS</b></h4>
+                            <div class="card-body p-0">
+                                <div class="tags">
+                                    <p>
+                                        @foreach($tags as $tag)
+                                            <a href="{{url('/tag/posts/'.$tag->slug)}}"
+                                               class="tagColor tag-cloud-link">{{ $tag->title }}</a>
+                                        @endforeach
+                                    </p>
+                                </div>
+                            </div>
+                        </aside>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
